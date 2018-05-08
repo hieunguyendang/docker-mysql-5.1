@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mysql:
+    image: vsamov/mysql-5.1.73:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: ee
+      MYSQL_USER: ee
+      MYSQL_PASSWORD: ee
+    volumes:
+      - db:/var/lib/mysql
+    ports:
+      - '3306:3306'
+volumes:
+  db:
